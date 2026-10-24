@@ -7,11 +7,7 @@ fn main() {
 
     println!("¿Cuántos números deseas generar?");
 
-    let mut entrada = String::new();
-    io::stdin().read_line(&mut entrada).unwrap();
-
-    let cantidad: usize = entrada.trim().parse().expect("Cantidad inválida");
-
+    let cantidad: usize = capturar_input().trim().parse().expect("Cantidad inválida");
     let limite = cantidad.max(100) as i64;
 
     let mut numeros: Vec<i64> = (0..cantidad)
